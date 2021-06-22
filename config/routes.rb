@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :interesteds
   get '/', to: 'application#index', as: 'root'
  
  
