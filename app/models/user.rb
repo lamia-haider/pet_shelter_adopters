@@ -2,11 +2,10 @@ class User < ApplicationRecord
   has_many :interested
   has_many :pets, through: :interested 
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:google_oauth2]
-  
-  validates :name, uniqueness: true, presence: true, length: { in: 2..20 }
-  validates :name, uniqueness: true, presence: true, length: { in: 2..20 }
+  :recoverable, :rememberable, :omniauthable, :omniauth_providers => [:google_oauth2]
+   
   validates_uniqueness_of :email, :case_sensitive => false
+  validates_presence_of :email, :on=>:create
   validates_format_of :email, :with  => Devise.email_regexp
   validates_presence_of :password, :on=>:create
   validates_confirmation_of :password, :on=>:create
