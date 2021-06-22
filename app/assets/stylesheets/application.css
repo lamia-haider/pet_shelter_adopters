@@ -47,7 +47,9 @@ html, body {
       text-decoration: underline;
     }
   
-  
+  img {
+  border-radius: 50%;
+  }
   
   h1 {
     padding-top: 0;
@@ -119,6 +121,22 @@ html, body {
   input {
   display: inline-block;
   float: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    
+    padding: 15px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+   
+    text-align: center;
+    font-size: 1em;
+    
   }
   
   
