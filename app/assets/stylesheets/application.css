@@ -13,3 +13,113 @@
  *= require_tree .
  *= require_self
  */
+
+ /* base CSS */
+
+html, body {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    color: #325050;
+    background: rgb(249, 251, 255);
+    font-size: 1em;
+  }
+  
+  .checkbox {
+    position: relative;
+  }
+  .checkbox_container input {
+    display: inline;
+  }
+  a {
+    color: #0d8ba1;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    text-decoration: none;
+  }
+    a:visited {
+      color: #1a5952;
+    }
+    a:hover, a:focus {
+      color: #0599c2;
+      text-decoration: underline;
+    }
+  
+  
+  
+  h1 {
+    padding-top: 0;
+    padding-bottom: 5px;
+    border-bottom: none;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 3.2em;
+    text-transform: uppercase;
+  }
+  
+  
+  
+  h3 {
+    margin: 25px 0 0 0;
+    color: #0088aa;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  p {
+    margin: 0.75em 0;
+    line-height: 2;
+  }
+  
+  
+  .page-wrapper {
+    position: relative;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(2, 182, 214);
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(14, 74, 122);
+  }
+  
+  .topnav a.active {
+    background-color: #0a5e80;
+    color: white;
+  }
+  
+  .form {
+    width: 50%;
+    margin: 200px auto;
+  }
+  
+  label{
+    display: inline-block;
+  
+  }
+  input {
+  display: inline-block;
+  float: center;
+  }
+  
+  
+   
