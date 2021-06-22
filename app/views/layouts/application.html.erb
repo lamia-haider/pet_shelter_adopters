@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PetShelterAdopters</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pet Shelter</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="<%= root_url %>"/>Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+ 
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    
+
+
+    <!-- content -->
+    <div class="container"  role="main">
+
+        <style>
+        .flash__alert   { color: red; }
+        .flash__notice  { color: blue; }
+        .flash__success { color: green; }
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+    <% if flash.any? %>
+      <% flash.each do |key, value| -%>
+        <section class="flash flash__<%= key %>"><%= value.html_safe %></section>
+      <% end -%>
+    <% end %>
+      <%= yield %>
+  
+    
+ 
+    </div>
   </body>
 </html>
