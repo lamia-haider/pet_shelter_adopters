@@ -26,6 +26,7 @@ gem 'dotenv-rails'
 
 gem 'omniauth', '~> 1.9.1'
 gem 'omniauth-google-oauth2'
+gem 'acts-as-taggable-on', '~> 7.0'
 
 
 # Use Active Storage variant
