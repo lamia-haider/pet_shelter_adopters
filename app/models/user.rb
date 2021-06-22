@@ -11,7 +11,10 @@ class User < ApplicationRecord
   validates_presence_of :password, :on=>:create
   validates_confirmation_of :password, :on=>:create
   validates_length_of :password, :within => Devise.password_length 
+
+  scope :pets_interested, -> {joins(:interested).group('pet.name')}
   
+
   def self.from_omniauth(access_token)
     data = access_token.info
     user = User.where(:email => data["email"]).first
@@ -24,4 +27,6 @@ class User < ApplicationRecord
     end
     user
   end
+
+
 end
