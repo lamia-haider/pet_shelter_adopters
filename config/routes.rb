@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-
-  resources :interesteds
+ 
   get '/', to: 'application#index', as: 'root'
- 
- 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+   
+  devise_for :users
+  # , :controllers => { 
+  #   omniauth_callbacks: "users/omniauth_callbacks",
+  #   confirmations: 'users/confirmations',
+  #   passwords: 'users/passwords',
+  #   registrations: 'users/registrations',
+  #   sessions: 'users/sessions' }
   resources :pets
-  resources :users
-
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

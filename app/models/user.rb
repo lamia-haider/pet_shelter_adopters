@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   has_many :interested
-  has_many :pets, through: :interested
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :omniauthable, :omniauth_providers => [:google_oauth2]
+  has_many :pets, through: :interested 
+  devise :database_authenticatable, :registerable,
+  :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:google_oauth2]
+  
   validates :name, uniqueness: true, presence: true, length: { in: 2..20 }
   validates :name, uniqueness: true, presence: true, length: { in: 2..20 }
   validates_uniqueness_of :email, :case_sensitive => false
@@ -13,8 +13,8 @@ class User < ApplicationRecord
   validates_length_of :password, :within => Devise.password_length 
 
   scope :pets_interested, -> {joins(:interested).group('users.name')}
-  scope :interested_cats, -> {joins(:interested).where('pets.species = cat').group('users.name')
-  scope :interested_dogs, -> {joins(:interested).where('pets.species = dog').group('users.name')
+  scope :interested_cats, -> {joins(:interested).where('pets.species = cat').group('users.name')}
+  scope :interested_dogs, -> {joins(:interested).where('pets.species = dog').group('users.name')}
 
   def self.from_omniauth(access_token)
     data = access_token.info
