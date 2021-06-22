@@ -3,16 +3,13 @@ Rails.application.routes.draw do
   get '/', to: 'application#index', as: 'root'
 
   devise_scope :user do
+    get '/signin', to: 'devise/sessions#new'
     get '/signout', to: 'devise/sessions#destroy'
   end
    
-  devise_for :users
-  # , :controllers => { 
-  #   omniauth_callbacks: "users/omniauth_callbacks",
-  #   confirmations: 'users/confirmations',
-  #   passwords: 'users/passwords',
-  #   registrations: 'users/registrations',
-  #   sessions: 'users/sessions' }
+  devise_for :users, :controllers => { 
+    omniauth_callbacks: "users/omniauth_callbacks"
+      }
  
   resources :pets
   
