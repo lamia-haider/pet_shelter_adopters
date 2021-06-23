@@ -57,7 +57,8 @@ html, body {
     border-bottom: none;
     font-family: 'Julius Sans One', sans-serif;
     font-size: 3.2em;
-    text-transform: uppercase;
+    text-align: center;
+ 
   }
   
   
@@ -66,9 +67,8 @@ html, body {
     margin: 25px 0 0 0;
     color: #0088aa;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: normal;
-    text-transform: uppercase;
   }
   p {
     margin: 0.75em 0;
@@ -124,16 +124,19 @@ html, body {
   }
 
   .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 10px;
     
+    display: grid;
+    grid-template-columns: fit-content(150px) ;
+    grid-gap: 20px;
     padding: 15px;
+    position:absolute;
+    bottom:400px;
+    right:50px;
   }
-  
+
+
   .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-   
+  
     text-align: center;
     font-size: 1em;
     
