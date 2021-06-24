@@ -50,19 +50,12 @@ html, body {
   img {
   border-radius: 50%;
   }
-
-  .header {
-    padding: 10px;
-    text-align: center;
-    color: #0088aa;
-    font-size: 30px;
-  }
   
   h1 {
     padding-top: 0;
     padding-bottom: 5px;
     border-bottom: none;
-    font-family: Arial;
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 3.2em;
     text-align: center;
  
@@ -101,9 +94,9 @@ html, body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 20px 25px;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
   }
   
   .topnav a:hover {
@@ -111,6 +104,10 @@ html, body {
     color: rgb(14, 74, 122);
   }
   
+  .topnav a.active {
+    background-color: #0a5e80;
+    color: white;
+  }
   
   .form {
     width: 50%;
@@ -124,7 +121,6 @@ html, body {
   input {
   display: inline-block;
   float: center;
-  background-color: #55b7c9;
   }
 
   .grid-container {
@@ -151,10 +147,11 @@ html, body {
     
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: repeat(8, 1fr);  
+    grid-template-columns: repeat(8, 1fr);
+   
+    
+      
     padding: 10px;
-    position: relative;
-    top: 100px;
   }
   .grid-main > div {
   
@@ -166,48 +163,24 @@ html, body {
 
   .search {
     display: block;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 40%;
   }
 
-  .form-submit-button { 
+  .form-submit-button {
+    background: #55b7c9;   
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-  
     color: white;
-    height: 30px;
-    width: 70px;
+    border-style: outset;
+    border-color: #55b7c9;
+    height: 50px;
+    width: 100px;
     font: bold 15px arial, sans-serif;
     text-shadow:none;
 }
 
-
-  .grid-search {
- 
-    display: flex; 
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 4px;
-    -moz-column-gap: 4px;
-    column-gap: 4px;
-    -webkit-column-rule: 1px solid transparent;
-    -moz-column-rule: 1px solid transparent;
-    column-rule: 1px solid transparent;
-    justify-content: center;
-    position: relative;
-    top: -10px;
   
-  }
-  
-  .grid-search > div {
-  
-    text-align: center;
-    font-size: 1em;
-    
-  
-  }
-
   
    
