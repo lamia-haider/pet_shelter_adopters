@@ -7,13 +7,20 @@ Rails.application.routes.draw do
     get '/signout', to: 'devise/sessions#destroy'
     post '/interested', to: 'pets#interested'
   end
+
+  get 'users/:id/edit', to: 'users#edit', as: :edit_user
+  patch 'users/:id', to: 'users#update'
    
   devise_for :users, :controllers => { 
     omniauth_callbacks: "users/omniauth_callbacks"
       }
  
   resources :pets
-  resources :users, :only => [:index] 
+
+  resources :users, :only => [:index, :show, :edit, :update] do
+    resources :pets, :only => [:show]
+  end
+      
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
