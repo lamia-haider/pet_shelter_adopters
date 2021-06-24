@@ -10,7 +10,7 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
 
-  config.omniauth :google_oauth2, '494742389689-82mt9b85sahd6rroser1pfgp3a5cmri5.apps.googleusercontent.com', '0q0ItBe2xc80_JWVOioT8ts_', {}
+  config.omniauth :google_oauth2, '494742389689-82mt9b85sahd6rroser1pfgp3a5cmri5.apps.googleusercontent.com', 'TpyKkKcK1uIRX4SS_cGkDAGG', {}
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
