@@ -1,17 +1,28 @@
 class ApplicationController < ActionController::Base
 
     def index
-        @pets = Pet.all
-        @pet = []
-        @interested_user = []
-        @interested_user = Interested.select do |interested| interested.user_id == current_user.id
-            @interested_user.each do |int|
-                @pet << int.pet_id 
-            
-            end
+        if current_user
 
-        end
- 
+            @pet_objects = []
+
+            @interested_user = Interested.where(:user_id => current_user.id)
+         #  raise params.inspect
+        #     @pets = Pet.all
+        #     @pet_ids = []
+        #     
+       
+        #     @interested_user = current_user.interested.all
         
+            @interest_pets = @interested_user.map do |eachuser| eachuser.pet_id
+            end
+            @interest_pets.each do |eachpet|
+                if Pet.find(eachpet)
+                        @pet_objects << Pet.find(eachpet)
+                end
+            end
+            #raise params.inspect
+        end
     end
 end
+
+
