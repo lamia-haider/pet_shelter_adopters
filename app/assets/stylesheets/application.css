@@ -39,13 +39,12 @@ html, body {
     transition: all 0.25s ease-out;
     text-decoration: none;
   }
-    a:visited {
-      color: #1a5952;
-    }
+    
     a:hover, a:focus {
       color: #0599c2;
       text-decoration: underline;
     }
+
   
   .circle-img {
     border-radius: 15px;
@@ -153,6 +152,10 @@ html, body {
     background-color: #0a5e80;
     color: white;
   }
+
+  form {
+    margin-bottom: 20px
+  }
   
   .form {
     width: 50%;
@@ -206,11 +209,12 @@ html, body {
   
   }
 
-  .search {
+  .grid-search {
     display: block;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+
   }
 
   .form-submit-button {
@@ -220,10 +224,10 @@ html, body {
     color: white;
     border-style: outset;
     border-color: #55b7c9;
-    height: 50px;
+    height: 30px;
     width: 100px;
     font: bold 15px arial, sans-serif;
-    text-shadow:none;
+    margin-bottom: 15px;
 }
 
 .blocktext {
