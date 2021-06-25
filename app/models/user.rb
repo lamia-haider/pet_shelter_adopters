@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates_format_of :email, :with  => Devise.email_regexp
   validates_presence_of :password, :on=>:create
   validates_confirmation_of :password, :on=>:create
-  validates_length_of :password, :within => Devise.password_length 
+  enum role: [:admin, :user]
 
   scope :pets_interested, -> {joins(:interested).group('users.name')}
   scope :interested_cats, -> {joins(:interested).where('pets.species = cat').group('users.name')}
