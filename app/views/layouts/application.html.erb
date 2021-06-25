@@ -9,8 +9,14 @@
   <body>
     <div class="topnav">
       <a class="active" href="<%= root_url %>"/>Home</a>
+      <% if current_user%>
+        <% if current_user.role == "admin" %>
+          <%= link_to "Admin", users_path %>
+        <% end %>
+      <%end%>
 
       <%= link_to 'Adoptable!', pets_path %> 
+
 
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
@@ -19,7 +25,8 @@
         <% else %>
         <%= link_to "Sign up",  new_user_registration_path  %> 
         <%= link_to "Login", signin_path %>
-    <% end %>
+     <%end%>
+
     </div>
  
           </ul>

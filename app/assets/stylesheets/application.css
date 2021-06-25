@@ -47,9 +47,25 @@ html, body {
       text-decoration: underline;
     }
   
-  img {
-  border-radius: 50%;
+  .circle-img {
+    border-radius: 15px;
+    overflow: hidden;
+    perspective: 1px;
   }
+
+  .banner-image {
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+
+
+  }
+  
+  /* Place text in the middle of the image */
+
   
   h1 {
     padding-top: 0;
@@ -58,6 +74,23 @@ html, body {
     font-family: 'Julius Sans One', sans-serif;
     font-size: 3.2em;
     text-align: center;
+ 
+  }
+
+  h2 {
+    padding-top: 0;
+    position: fixed;
+
+    border-bottom: none;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 4em;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    color: white;
  
   }
   
@@ -70,6 +103,18 @@ html, body {
     font-size: 1em;
     font-weight: normal;
   }
+
+  h5 {
+    display: block;
+    font-size: 2em;
+    color: #0088aa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
   p {
     margin: 0.75em 0;
     line-height: 2;
@@ -179,6 +224,16 @@ html, body {
     width: 100px;
     font: bold 15px arial, sans-serif;
     text-shadow:none;
+}
+
+.blocktext {
+  color: #0d8ba1;
+  margin-left: auto;
+  margin-right: auto;
+  top: auto;
+  width: 60em;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1em;
 }
 
   
