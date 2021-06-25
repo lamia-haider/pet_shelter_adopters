@@ -55,10 +55,14 @@ html, body {
   .banner-image {
 
     /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
+
     text-align: center;
-    position: relative;
+    margin-left: 200px;
+    border-radius: 65px;
+    overflow: hidden;
+
+
+   
 
 
   }
@@ -78,7 +82,7 @@ html, body {
 
   h2 {
     padding-top: 0;
-    position: fixed;
+    position:;
 
     border-bottom: none;
     font-family: 'Julius Sans One', sans-serif;
@@ -86,10 +90,9 @@ html, body {
     text-align: center;
     font-weight: bold;
     text-align: center;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, 90%);
-    color: white;
+ 
+   
+    color: rgb(138, 200, 241);
  
   }
   
@@ -99,8 +102,17 @@ html, body {
     margin: 25px 0 0 0;
     color: #0088aa;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h4 {
+    margin: 25px 0 0 0;
+    color: #0088aa;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    font-weight: normal;
+    text-align:left;
   }
 
   h5 {
@@ -147,11 +159,7 @@ html, body {
     background-color: #ddd;
     color: rgb(14, 74, 122);
   }
-  
-  .topnav a.active {
-    background-color: #0a5e80;
-    color: white;
-  }
+ 
 
   form {
     margin-bottom: 20px
@@ -195,11 +203,11 @@ html, body {
     
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: repeat(8, 1fr);
-   
-    
-      
+    grid-template-columns: repeat(6, 1fr);
     padding: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+
   }
   .grid-main > div {
   
@@ -216,6 +224,34 @@ html, body {
     margin-right: auto;
 
   }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    column-gap: 15px;
+  }
+  .toside {
+
+    width: 200px;
+    background-color: #f1f1f1;
+    top: -200px;
+    margin-left: 0%;
+    text-align: center;
+
+  }
+  .wrapper-sidebar {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    column-gap: 0px;
+  }
+
 
   .form-submit-button {
     background: #55b7c9;   
@@ -232,10 +268,11 @@ html, body {
 
 .blocktext {
   color: #0d8ba1;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 350px;
+  margin-right: 350px;
   top: auto;
-  width: 60em;
+
+  width:auto;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 1em;
 }
