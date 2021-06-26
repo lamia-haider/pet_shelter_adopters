@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+    respond_to :html, :json
 
     def index
         if user_signed_in?
