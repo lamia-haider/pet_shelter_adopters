@@ -28,5 +28,9 @@ class User < ApplicationRecord
     user
   end
 
+  def joindate
+    self.created_at.strftime("%B %d, %Y")
+  end
+
 
 end

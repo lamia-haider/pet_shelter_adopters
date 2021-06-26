@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get '/signout', to: 'users/sessions#destroy'
     post '/interested', to: 'pets#interested'
     get '/users/admindelete/:id', to: 'users#destroy'
+    get '/users/adminupdate/:id', to: 'users#edit'
     
   end
    
