@@ -19,7 +19,6 @@
 
 
       <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
         <%= link_to 'Edit profile', edit_user_registration_path %> 
         <%= link_to 'Sign Out', signout_path, method: :delete %>  
         <% else %>
@@ -28,6 +27,11 @@
      <%end%>
 
     </div>
+      
+        <div class= "topnav-p">
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>
+        <%end%></div>
  
           </ul>
         </div><!--/.nav-collapse -->

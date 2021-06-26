@@ -49,7 +49,7 @@ html, body {
   .circle-img {
     border-radius: 15px;
     overflow: hidden;
-    perspective: 1px;
+   
   }
 
   .banner-image {
@@ -116,16 +116,13 @@ html, body {
   }
 
   h5 {
-    display: block;
-    font-size: 2em;
+
+    font-size: 1.5em;
     color: #0088aa;
     font-family: Arial, Helvetica, sans-serif;
-    margin-block-start: 1.67em;
-    margin-block-end: 1.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
-}
+    
+  }
   p {
     margin: 0.75em 0;
     line-height: 2;
@@ -143,6 +140,7 @@ html, body {
   
   .topnav {
     overflow: hidden;
+    height: 70px;
     background-color: rgb(2, 182, 214);
   }
   
@@ -150,9 +148,20 @@ html, body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 30px 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
+ 
+  }
+
+  .topnav-p {
+    float: right;
+    color: #5fa4f3;
+    text-align: center;
+
+    text-decoration: none;
+    font-size: 10px;
+ 
   }
   
   .topnav a:hover {
@@ -249,9 +258,15 @@ html, body {
     grid-template-columns: 10fr 1fr;
     margin-left: auto;
     margin-right: auto;
-
-
     column-gap: 0px;
+  }
+
+  .wrapper-single {
+    display:block;
+    text-align: center;
+    font-size: 1.5em;
+    color: #0088aa;
+    font: bold 20px arial, sans-serif;
   }
 
 

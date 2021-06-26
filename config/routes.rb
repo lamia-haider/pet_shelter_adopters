@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   resources :users, :only => [:index, :show, :update] 
 
   devise_scope :user do
-    get '/signin', to: 'devise/sessions#new'
-    get '/signout', to: 'devise/sessions#destroy'
+    get '/signin', to: 'users/sessions#new'
+    get '/signout', to: 'users/sessions#destroy'
     post '/interested', to: 'pets#interested'
     get '/users/admindelete/:id', to: 'users#destroy'
     

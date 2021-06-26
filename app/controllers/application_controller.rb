@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
     def index
-        if current_user
+        if user_signed_in?
 
             @pet_objects = []
 
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
             @interest_pets = @interested_user.map do |eachuser| eachuser.pet_id
             end
             @interest_pets.each do |eachpet|
-                if Pet.find(eachpet)
+                if Pet.any?{|h| h[:id] == eachpet}
                         @pet_objects << Pet.find(eachpet)
                 end
             end
